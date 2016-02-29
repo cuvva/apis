@@ -24,3 +24,7 @@ These services have both development and production endpoints to allow for safe 
 The production-only services can be used with the development services also.
 i.e. any file upload can be used with both the development and production
 systems.
+
+By default, accounts only work on the production systems. If you'd like access
+to the development servers, drop me an email at
+[james.billingham@cuvva.co](mailto:james.billingham@cuvva.co).
