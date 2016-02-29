@@ -19,12 +19,31 @@ Example response body:
 
 ```json
 {
-	"id": "4b0f9115-f736-4ac8-a8e3-127991dea6cf",
+	"id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"createdAt": "2015-01-01T00:00:00Z",
 	"updatedAt": "2015-01-01T00:00:00Z",
-	"personalName": "James Edward",
+	"title": "Mr",
 	"familyName": "Billingham",
-	[...]
+	"personalName": "James",
+	"preferredName": "Bob",
+	"sex": "M",
+	"birthDate": "1990-01-01",
+	"licenseNumber": "BILLI901010J99AA",
+	"emailAddress": "james@cuvva.co",
+	"mobilePhone": "+447700900123",
+	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
+	"licensePhotoId": "56d4b4d241a58b01003e3419",
+	"address": {
+		"lines": [
+			"Cuvva c/o Codebase",
+			"3 Lady Lawson Street"
+		],
+		"locality": "Edinburgh",
+		"postalCode": "EH3 9DR",
+		"countryCode": "GB"
+	},
+	"claims": [],
+	"dvlaDisability": false
 }
 ```
 
@@ -39,8 +58,15 @@ Example request body:
 
 ```json
 {
-	"emailAddress": "james@cuvva.co",
-	[...]
+	"address": {
+		"lines": [
+			"Cuvva c/o Barclays Accelerator",
+			"69-89 Mile End Road"
+		],
+		"locality": "London",
+		"postalCode": "E1 4TT",
+		"countryCode": "GB"
+	}
 }
 ```
 
@@ -48,13 +74,31 @@ Example response body:
 
 ```json
 {
-	"id": "4b0f9115-f736-4ac8-a8e3-127991dea6cf",
+	"id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"createdAt": "2015-01-01T00:00:00Z",
-	"updatedAt": "2015-01-01T12:00:00Z",
-	"personalName": "James Edward",
+	"updatedAt": "2015-01-01T00:00:00Z",
+	"title": "Mr",
 	"familyName": "Billingham",
+	"personalName": "James",
+	"preferredName": "Bob",
+	"sex": "M",
+	"birthDate": "1990-01-01",
+	"licenseNumber": "BILLI901010J99AA",
 	"emailAddress": "james@cuvva.co",
-	[...]
+	"mobilePhone": "+447700900123",
+	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
+	"licensePhotoId": "56d4b4d241a58b01003e3419",
+	"address": {
+		"lines": [
+			"Cuvva c/o Barclays Accelerator",
+			"69-89 Mile End Road"
+		],
+		"locality": "London",
+		"postalCode": "E1 4TT",
+		"countryCode": "GB"
+	},
+	"claims": [],
+	"dvlaDisability": false
 }
 ```
 
