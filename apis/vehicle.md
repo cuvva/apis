@@ -151,10 +151,22 @@ Example response body:
 
 For non-internal requests, `user_id` must match the access token JWT subject.
 
+Request body must not be provided. In the future, a body may be allowed without
+notice.
+
+Response will be a 204 (indicating no content). In the future, this may change
+to a 200 with a JSON body without notice.
+
 ### `DELETE /1/users/:user_id/vehicles/:vehicle_id`
 
 Removes the vehicle from the user's garage.
 
 For non-internal requests, `user_id` must match the access token JWT subject.
+
+Request body must not be provided. In the future, a body may be allowed without
+notice.
+
+Response will be a 204 (indicating no content). In the future, this may change
+to a 200 with a JSON body without notice.
 
 [1]: https://github.com/cuvva/standards/blob/master/services.md
