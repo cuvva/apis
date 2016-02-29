@@ -42,7 +42,7 @@ Example response body:
 	"id": "73c5fcaa-95c6-4784-aebd-0f729c1e5373",
 	"userId": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"vehicleId": "56150f6fd0acdc14008e9551",
-	"vehicleValue": 5000
+	"vehicleValue": 5000,
 	"expiryDate": "2016-02-29T12:10:30.354Z",
 	"quotes": [
 		{
@@ -59,8 +59,7 @@ Example response body:
 			"underwriterShortName": "Foobar",
 			"keyFactsHTML": "<p>Blah blah, long key facts HTML</p>",
 			"policyHTML": "<p>Blah blah, even longer full policy HTML</p>"
-		},
-		[...]
+		}
 	]
 }
 ```
@@ -105,8 +104,7 @@ Example response body:
 			"extraFees": 100,
 			"vat": 20,
 			"totalPayable": 623
-		},
-		[...]
+		}
 	]
 }
 ```
@@ -146,7 +144,7 @@ Example response body:
 	"incidentPhone": "+447700900999",
 	"detailsHTML": "<p>Blah blah, clever certificate HTML</p>",
 	"keyFactsHTML": "<p>Blah blah, long key facts HTML</p>",
-	"policyHTML": "<p>Blah blah, even longer full policy HTML</p>"
+	"policyHTML": "<p>Blah blah, even longer full policy HTML</p>",
 	"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 	"underwriterLegalName": "Foobar Insurance Company Limited",
 	"underwriterShortName": "Foobar",
@@ -179,13 +177,12 @@ Example response body:
 			"incidentPhone": "+447700900999",
 			"detailsHTML": "<p>Blah blah, clever certificate HTML</p>",
 			"keyFactsHTML": "<p>Blah blah, long key facts HTML</p>",
-			"policyHTML": "<p>Blah blah, even longer full policy HTML</p>"
+			"policyHTML": "<p>Blah blah, even longer full policy HTML</p>",
 			"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 			"underwriterLegalName": "Foobar Insurance Company Limited",
 			"underwriterShortName": "Foobar",
 			"referenceCode": "PQ37E6HEDC"
-		},
-		[...]
+		}
 	]
 }
 ```
