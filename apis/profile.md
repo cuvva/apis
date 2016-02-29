@@ -66,6 +66,20 @@ Example request body:
 		"locality": "London",
 		"postalCode": "E1 4TT",
 		"countryCode": "GB"
+	},
+	"claims": [
+		{
+			"incidentDate": "2014-01-01",
+			"category": "Accident",
+			"bodilyInjury": false,
+			"atFault": false,
+			"value": 500
+		}
+	],
+	"dvlaDisability": {
+		"lastYear": false,
+		"notified": true,
+		"unrestricted": true
 	}
 }
 ```
@@ -97,8 +111,20 @@ Example response body:
 		"postalCode": "E1 4TT",
 		"countryCode": "GB"
 	},
-	"claims": [],
-	"dvlaDisability": false
+	"claims": [
+		{
+			"incidentDate": "2014-01-01",
+			"category": "Accident",
+			"bodilyInjury": false,
+			"atFault": false,
+			"value": 500
+		}
+	],
+	"dvlaDisability": {
+		"lastYear": false,
+		"notified": true,
+		"unrestricted": true
+	}
 }
 ```
 
