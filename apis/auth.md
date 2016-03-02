@@ -43,7 +43,6 @@ Example request body:
 ```
 client_id=06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f
 &grant_type=verification_token
-&scope=openid
 &verification_method=sms
 &verification_identifier=%2B447700900123
 &verification_token=969775
