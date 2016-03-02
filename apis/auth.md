@@ -36,9 +36,16 @@ Currently, the only content type accepted is `x-www-form-urlencoded`, in line
 with the OAuth spec. This will be expanded to also allow JSON eventually, but
 presently JSON is not accepted.
 
+Access tokens expire one hour after being issued. Refresh tokens expire after a
+year. As such, you can use the refresh tokens to continually create new access
+tokens in response to 401 statuses from other services. Refresh tokens can only
+be used once - when they are used, a replacement is provided.
+
 No authentication/authorization is required to use this method.
 
-Example request body:
+Example request bodies: (one for each supported grant type)
+
+#### verification token
 
 ```
 client_id=06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f
@@ -46,6 +53,14 @@ client_id=06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f
 &verification_method=sms
 &verification_identifier=%2B447700900123
 &verification_token=969775
+```
+
+#### refresh token
+
+```
+client_id=06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f
+&grant_type=refresh_token
+&refresh_token=01.d0114919-541b-4415-8ad5-29ccec08a69c.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86
 ```
 
 The line-breaks are for clarity only and must not be included in real requests.
@@ -56,7 +71,8 @@ Example response body:
 {
 	"access_token": "01.eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkifQ.",
 	"token_type": "bearer",
-	"expires_in": 86399,
+	"expires_in": 3599,
+	"refresh_token": "01.d0114919-541b-4415-8ad5-29ccec08a69c.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
 	"id_token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkifQ."
 }
 ```
