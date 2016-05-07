@@ -17,6 +17,7 @@ and only run in production:
 These services have both development and production endpoints to allow for safe testing:
 
 - [billing](billing.md) - stores users' payment methods and authorizes payments
+- [garage](garage.md) - tracks ownership of vehicles and suggests relevant vehicles
 - [motor coverage](motor-coverage.md) - issues quotes and policies for motor insurance
 - [profile](profile.md) - handles user profile data (name, birth date, etc.)
 - [promo](promo.md) - tracks user referral (and will also do voucher codes)
