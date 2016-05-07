@@ -13,7 +13,13 @@ Conforms to the [Cuvva services standard][1]. However, unlike most Cuvva
 services, this service is *not* RESTful. This is by design - a small experiment
 to see whether a simplified RPC-style interface could serve us better.
 
-All methods are specified below. Methods are called as `POST /2/:method`.
+All methods are specified below. Methods are called as
+`POST /2/:version/:method`.
+
+The `:version` is replaced with the date you implemented the code using the API.
+Versions must not be mixed and matched - all calls to this service must use the
+same version string.
+
 Neither the query string, nor any URL parameters are used. Input is only
 supported via the body. JSON and urlencoded forms are supported for input.
 Output is always JSON. Unless otherwise noted, methods do not require
