@@ -46,12 +46,13 @@ The `facebook_token` is optional.
 
 ```json
 {
-	"access_token": "01.eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkifQ.",
+	"access_token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkiLCJhdWQiOiIwNmM5MmYyYy04YmJiLTQwM2MtOWVlNy0zYjNiOGViMGIzMGYifQ.",
 	"token_type": "bearer",
 	"expires_in": 3600,
 	"expires_at": "2016-06-01T00:00:00Z",
 	"refresh_token": "02.571cbf2a5e72750100a41a5b.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
-	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159"
+	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f"
 }
 ```
 
@@ -107,12 +108,13 @@ If this happens, the user will typically need to log in again from scratch.
 
 ```json
 {
-	"access_token": "01.eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkifQ.",
+	"access_token": "eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkiLCJhdWQiOiIwNmM5MmYyYy04YmJiLTQwM2MtOWVlNy0zYjNiOGViMGIzMGYifQ.",
 	"token_type": "bearer",
 	"expires_in": 3600,
 	"expires_at": "2016-06-01T00:00:00Z",
 	"refresh_token": "02.571cbbadf999da0100de3a70.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
-	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159"
+	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f"
 }
 ```
 
