@@ -29,8 +29,6 @@ Example response body:
 	"sex": "M",
 	"birthDate": "1990-01-01",
 	"licenseNumber": "BILLI901010J99AA",
-	"emailAddress": "james@cuvva.co",
-	"mobilePhone": "+447700900123",
 	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
 	"licensePhotoId": "56d4b4d241a58b01003e3419",
 	"address": {
@@ -42,8 +40,7 @@ Example response body:
 		"postalCode": "EH3 9DR",
 		"countryCode": "GB"
 	},
-	"claims": [],
-	"dvlaDisability": false
+	"claims": []
 }
 ```
 
@@ -75,12 +72,7 @@ Example request body:
 			"atFault": false,
 			"value": 500
 		}
-	],
-	"dvlaDisability": {
-		"lastYear": false,
-		"notified": true,
-		"unrestricted": true
-	}
+	]
 }
 ```
 
@@ -98,8 +90,6 @@ Example response body:
 	"sex": "M",
 	"birthDate": "1990-01-01",
 	"licenseNumber": "BILLI901010J99AA",
-	"emailAddress": "james@cuvva.co",
-	"mobilePhone": "+447700900123",
 	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
 	"licensePhotoId": "56d4b4d241a58b01003e3419",
 	"address": {
@@ -119,12 +109,7 @@ Example response body:
 			"atFault": false,
 			"value": 500
 		}
-	],
-	"dvlaDisability": {
-		"lastYear": false,
-		"notified": true,
-		"unrestricted": true
-	}
+	]
 }
 ```
 
