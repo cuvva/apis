@@ -22,6 +22,11 @@ Neither the query string, nor any URL parameters are used. Input is only
 supported via the body. JSON and urlencoded forms are supported for input.
 Output is always JSON. All methods require authorization.
 
+Where no response is specified for a method, no response will be provided. The
+status code will be 204. The response may be changed to return data - with a
+different 2xx status code - at any time. This would not be considered a breaking
+change.
+
 ### `get_suggested_vehicles`
 
 Retrieves up to five vehicles which the user is likely to want to interact with,
@@ -58,6 +63,91 @@ will track the current location of vehicles in the future.
 		"color": "Silver"
 	}
 ]
+```
+
+### `report_potential_ownership`
+
+Records potential vehicle ownership against a specific user ID.
+
+#### Request
+
+```json
+{
+	"userId": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicleId": "56150f6fd0acdc14008e9551",
+	"estimatedValue": 5555
+}
+```
+
+### `report_vague_potential_ownership`
+
+Records potential vehicle ownership against a name and a set of identifiers.
+
+#### Request
+
+```json
+{
+	"vehicleId": "56150f6fd0acdc14008e9551",
+	"estimatedValue": 5555,
+	"name": "Freddy Macnamara",
+	"identifiers": [
+		{
+			"type": "mobile_phone",
+			"value": "+447700900123"
+		},
+		{
+			"type": "email",
+			"value": "freddy@cuvva.co"
+		}
+	]
+}
+```
+
+The `name` field is optional, but strongly preferred. At least one identifier
+must be provided. Multiple identifiers of the same type can be provided.
+
+### `list_potentially_owned_vehicles`
+
+Retrieves a set of vehicles which may be owned by the given user. At present,
+this list is provided without any particular order.
+
+#### Request
+
+```json
+{
+	"userId": "13feab59-f669-4b6c-888a-077aaab235b4"
+}
+```
+
+#### Response
+
+```json
+[
+	{
+		"id": "56150f6fd0acdc14008e9551",
+		"estimated_value": 5555,
+		"vrm": "LB07SEO",
+		"pretty_vrm": "LB07 SEO",
+		"manufacture_year": 2007,
+		"make": "Volkswagen",
+		"model": "Polo",
+		"color": "Silver"
+	}
+]
+```
+
+### `deny_ownership`
+
+Flags a given user's potential ownership of a vehicle as false, thereby removing
+it from the output of the list in the method above.
+
+#### Request
+
+```json
+{
+	"userId": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicleId": "56150f6fd0acdc14008e9551"
+}
 ```
 
 [1]: https://github.com/cuvva/standards/blob/master/services.md
