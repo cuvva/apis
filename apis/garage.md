@@ -73,9 +73,9 @@ Records potential vehicle ownership against a specific user ID.
 
 ```json
 {
-	"userId": "13feab59-f669-4b6c-888a-077aaab235b4",
-	"vehicleId": "56150f6fd0acdc14008e9551",
-	"estimatedValue": 5555
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicle_id": "56150f6fd0acdc14008e9551",
+	"estimated_value": 5555
 }
 ```
 
@@ -87,8 +87,8 @@ Records potential vehicle ownership against a name and a set of identifiers.
 
 ```json
 {
-	"vehicleId": "56150f6fd0acdc14008e9551",
-	"estimatedValue": 5555,
+	"vehicle_id": "56150f6fd0acdc14008e9551",
+	"estimated_value": 5555,
 	"name": "Freddy Macnamara",
 	"identifiers": [
 		{
@@ -115,7 +115,7 @@ this list is provided without any particular order.
 
 ```json
 {
-	"userId": "13feab59-f669-4b6c-888a-077aaab235b4"
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4"
 }
 ```
 
@@ -145,8 +145,8 @@ it from the output of the list in the method above.
 
 ```json
 {
-	"userId": "13feab59-f669-4b6c-888a-077aaab235b4",
-	"vehicleId": "56150f6fd0acdc14008e9551"
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicle_id": "56150f6fd0acdc14008e9551"
 }
 ```
 
