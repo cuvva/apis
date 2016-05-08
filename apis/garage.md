@@ -73,7 +73,8 @@ Records potential vehicle ownership against a specific user ID.
 
 ```json
 {
-	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"reporter_user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"owner_user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
 	"vehicle_id": "56150f6fd0acdc14008e9551",
 	"estimated_value": 5555
 }
@@ -87,6 +88,7 @@ Records potential vehicle ownership against a name and a set of identifiers.
 
 ```json
 {
+	"reporter_user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"vehicle_id": "56150f6fd0acdc14008e9551",
 	"estimated_value": 5555,
 	"name": "Freddy Macnamara",
