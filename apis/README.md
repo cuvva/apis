@@ -12,7 +12,7 @@ and only run in production:
 
 - [notification](notification.md) - registration of push notification tokens
 - [upload](upload.md) - handles all binary file uploads (e.g. photos)
-- [vehicle](vehicle.md) - keeps track of vehicles & allows simple vehicle lookup
+- [vehicle](vehicle.md) - allows simple vehicle lookup
 
 These services have both development and production endpoints to allow for safe testing:
 
