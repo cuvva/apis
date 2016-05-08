@@ -25,6 +25,11 @@ supported via the body. JSON and urlencoded forms are supported for input.
 Output is always JSON. Unless otherwise noted, methods do not require
 authorization.
 
+Where no response is specified for a method, no response will be provided. The
+status code will be 204. The response may be changed to return data - with a
+different 2xx status code - at any time. This would not be considered a breaking
+change.
+
 ### `register_user`
 
 Creates the user with unverified identifiers (other than the Facebook login) and
@@ -166,13 +171,6 @@ the identifier of the type on the account.
 }
 ```
 
-#### Response
-
-No response is provided for this method. The status code will be 204.
-
-This method may be changed to return data, with a different 2xx status code.
-This would not be considered a breaking change.
-
 ### `replace_identifier`
 
 Verifies an identifier and replaces any existing one of the type on the account
@@ -198,13 +196,6 @@ the exact reason. If the identifier is already used by another user, an
 }
 ```
 
-#### Response
-
-No response is provided for this method. The status code will be 204.
-
-This method may be changed to return data, with a different 2xx status code.
-This would not be considered a breaking change.
-
 ### `detach_identifier`
 
 Removes an identifier from the given user. Authorization is required.
@@ -223,13 +214,6 @@ existing identifier with the new one.
 }
 ```
 
-#### Response
-
-No response is provided for this method. The status code will be 204.
-
-This method may be changed to return data, with a different 2xx status code.
-This would not be considered a breaking change.
-
 ### `deauthenticate`
 
 Revokes all refresh tokens and access tokens associated with the user, including
@@ -244,12 +228,5 @@ Authentication is required.
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159"
 }
 ```
-
-#### Response
-
-No response is provided for this method. The status code will be 204.
-
-This method may be changed to return data, with a different 2xx status code.
-This would not be considered a breaking change.
 
 [1]: https://github.com/cuvva/standards/blob/master/services.md
