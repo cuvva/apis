@@ -27,7 +27,7 @@ status code will be 204. The response may be changed to return data - with a
 different 2xx status code - at any time. This would not be considered a breaking
 change.
 
-### `get_suggested_vehicles`
+### `list_relevant_vehicles`
 
 Retrieves up to five vehicles which the user is likely to want to interact with,
 ordered by relevancy where the most relevant vehicles come first. Sometimes zero
