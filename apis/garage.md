@@ -94,7 +94,7 @@ Records potential vehicle ownership against a name and a set of identifiers.
 	"name": "Freddy Macnamara",
 	"identifiers": [
 		{
-			"type": "mobile_phone",
+			"type": "phone",
 			"value": "+447700900123"
 		},
 		{
