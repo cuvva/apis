@@ -91,7 +91,8 @@ Records potential vehicle ownership against a name and a set of identifiers.
 	"reporter_user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"vehicle_id": "56150f6fd0acdc14008e9551",
 	"estimated_value": 5555,
-	"name": "Freddy Macnamara",
+	"family_name": "Macnamara",
+	"given_name": "Freddy",
 	"identifiers": [
 		{
 			"type": "phone",
@@ -105,7 +106,7 @@ Records potential vehicle ownership against a name and a set of identifiers.
 }
 ```
 
-The `name` field is optional, but strongly preferred. At least one identifier
+The name fields are optional, but strongly preferred. At least one identifier
 must be provided. Multiple identifiers of the same type can be provided.
 
 ### `list_potentially_owned_vehicles`
