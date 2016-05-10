@@ -152,4 +152,174 @@ it from the output of the list in the method above.
 }
 ```
 
+### `register_vehicle`
+
+Registers the vehicle against the user with the given details. Calling this
+again with the same `user_id` will update the vehicle's details.
+
+If a potential ownership exists for this vehicle without an outcome, it is
+updated to reflect the registration (and therefore removed from the potentially
+owned vehicles list).
+
+If the vehicle is already registered against another user, `already_registered`
+will be thrown.
+
+#### Request
+
+```json
+{
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicle_id": "56150f6fd0acdc14008e9551",
+	"estimated_value": 5555,
+	"photo_id": "5730a3ac1bb9810100904d6d",
+	"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
+	"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉"
+}
+```
+
+The `contribution_text` is optional.
+
+#### Response
+
+```json
+{
+	"id": "56150f6fd0acdc14008e9551",
+	"estimated_value": 5555,
+	"photo_url": "https://i.imgur.com/ve2hJmZ.png",
+	"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
+	"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+	"vrm": "LB07SEO",
+	"pretty_vrm": "LB07 SEO",
+	"manufacture_year": 2007,
+	"make": "Volkswagen",
+	"model": "Polo",
+	"color": "Silver"
+}
+```
+
+### `deregister_vehicle`
+
+De-registers the vehicle, removing it from the user's vehicle list. The vehicle
+can then be registered again by any user.
+
+#### Request
+
+```json
+{
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"vehicle_id": "56150f6fd0acdc14008e9551"
+}
+```
+
+### `list_owned_vehicles`
+
+Retrieves all the vehicles registered to the given user.
+
+The location data is not currently used, but is required in anticipation that we
+will track the current location of vehicles in the future.
+
+#### Request
+
+```json
+{
+	"user_id": "13feab59-f669-4b6c-888a-077aaab235b4",
+	"location": {
+		"latitude": 51.521,
+		"longitude": -0.052
+	}
+}
+```
+
+#### Response
+
+```json
+[
+	{
+		"id": "56150f6fd0acdc14008e9551",
+		"estimated_value": 5555,
+		"photo_url": "https://i.imgur.com/ve2hJmZ.png",
+		"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
+		"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+		"vrm": "LB07SEO",
+		"pretty_vrm": "LB07 SEO",
+		"manufacture_year": 2007,
+		"make": "Volkswagen",
+		"model": "Polo",
+		"color": "Silver"
+	}
+]
+```
+
+### `list_social_vehicles`
+
+Retrieves the vehicles registered to the given user's friends. Vehicles could be
+excluded if the given user does not have permission to see the vehicle.
+
+If the user is not connected to Facebook, `facebook_not_connected` will be
+thrown.
+
+The location data is not currently used, but is required in anticipation that we
+will track the current location of vehicles in the future.
+
+#### Request
+
+```json
+{
+	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"location": {
+		"latitude": 51.521,
+		"longitude": -0.052
+	}
+}
+```
+
+#### Response
+
+```json
+[
+	{
+		"owner": {
+			"id": "13feab59-f669-4b6c-888a-077aaab235b4",
+			"display_name": "Freddy Macnamara",
+			"short_name": "Freddy",
+			"image_url": "https://i.imgur.com/MhTIiHP.png"
+		},
+		"vehicle": {
+			"id": "56150f6fd0acdc14008e9551",
+			"estimated_value": 5555,
+			"photo_url": "https://i.imgur.com/ve2hJmZ.png",
+			"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
+			"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+			"vrm": "LB07SEO",
+			"pretty_vrm": "LB07 SEO",
+			"manufacture_year": 2007,
+			"make": "Volkswagen",
+			"model": "Polo",
+			"color": "Silver"
+		}
+	},
+	{
+		"owner": {
+			"id": "240e2a3e-638d-471b-9510-203e15b743b7",
+			"display_name": "George Miller",
+			"short_name": null,
+			"image_url": null
+		},
+		"vehicle": {
+			"id": "56151ccad0acdc14008e95c3",
+			"estimated_value": 10000,
+			"photo_url": "http://i.imgur.com/Qp11zsr.jpg",
+			"description": "Best car you'll ever drive, but be nice with her. She is nippy and can surprise you ;)",
+			"contribution_text": null,
+			"vrm": "GF09ERJ",
+			"pretty_vrm": "GF09 ERJ",
+			"manufacture_year": 2009,
+			"make": "MINI",
+			"model": "Cooper",
+			"color": "White"
+		}
+	}
+]
+```
+
 [1]: https://github.com/cuvva/standards/blob/master/services.md
