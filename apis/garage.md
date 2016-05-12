@@ -12,7 +12,7 @@ instead uses the simplified RPC-style interface first used in the
 [v2 auth service](https://github.com/cuvva/service-auth#api).
 
 All methods are specified below. Methods are called as
-`POST /2/:version/:method`.
+`POST /1/:version/:method`.
 
 The `:version` is replaced with the date you implemented the code using the API.
 Versions must not be mixed and matched - all calls to this service must use the
