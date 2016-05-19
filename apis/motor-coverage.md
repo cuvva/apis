@@ -152,6 +152,42 @@ Example response body:
 }
 ```
 
+### `GET /1/policies/:policy_id`
+
+Retrieves the policy chain for a given original policy. Calling this method with
+an extension policy will fail.
+
+For non-internal requests, the policy must be owned by the the access token JWT
+subject.
+
+Example response body:
+
+```json
+{
+	"originalPolicyId": "9c3ce7e8-ddbb-4caf-93bf-b7ba9cd28855",
+	"currentPolicyId": null,
+	"policies": [
+		{
+			"id": "9c3ce7e8-ddbb-4caf-93bf-b7ba9cd28855",
+			"duration": 3600,
+			"startDate": "2016-02-29T18:16:12Z",
+			"endDate": "2016-02-29T19:16:12Z",
+			"userId": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+			"vehicleId": "56150f6fd0acdc14008e9551",
+			"vehicleValue": 5000,
+			"incidentPhone": "+447700900999",
+			"detailsUrl": "https://example.com",
+			"keyFactsUrl": "https://example.com",
+			"policyUrl": "https://example.com",
+			"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
+			"underwriterLegalName": "Foobar Insurance Company Limited",
+			"underwriterShortName": "Foobar",
+			"referenceCode": "PQ37E6HEDC"
+		}
+	]
+}
+```
+
 ### `GET /1/users/:user_id/active_policies`
 
 Retrieves a set of the user's current policy chains.
