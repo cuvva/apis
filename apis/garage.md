@@ -187,6 +187,7 @@ The `contribution_text` is optional.
 {
 	"id": "56150f6fd0acdc14008e9551",
 	"estimated_value": 5555,
+	"photo_id": "5730a3ac1bb9810100904d6d",
 	"photo_url": "https://i.imgur.com/ve2hJmZ.png",
 	"available": true,
 	"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
@@ -240,6 +241,7 @@ will track the current location of vehicles in the future.
 	{
 		"id": "56150f6fd0acdc14008e9551",
 		"estimated_value": 5555,
+		"photo_id": "5730a3ac1bb9810100904d6d",
 		"photo_url": "https://i.imgur.com/ve2hJmZ.png",
 		"available": true,
 		"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
