@@ -188,6 +188,40 @@ Example response body:
 }
 ```
 
+### `GET /1/users/:user_id/policies`
+
+Retrieves a set of the user's current & historical policy chains.
+
+For non-internal requests, the `user_id` parameter must match the access token
+JWT subject.
+
+Example response body:
+
+```json
+[
+	{
+		"originalPolicyId": "9c3ce7e8-ddbb-4caf-93bf-b7ba9cd28855",
+		"currentPolicyId": "9c3ce7e8-ddbb-4caf-93bf-b7ba9cd28855",
+		"policies": [
+			{
+				"id": "9c3ce7e8-ddbb-4caf-93bf-b7ba9cd28855",
+				"duration": 3600,
+				"startDate": "2016-02-29T18:16:12Z",
+				"endDate": "2016-02-29T19:16:12Z",
+				"userId": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+				"vehicleId": "56150f6fd0acdc14008e9551",
+				"vehicleValue": 5000,
+				"incidentPhone": "+447700900999",
+				"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
+				"underwriterLegalName": "Foobar Insurance Company Limited",
+				"underwriterShortName": "Foobar",
+				"referenceCode": "PQ37E6HEDC"
+			}
+		]
+	}
+]
+```
+
 ### `GET /1/users/:user_id/active_policies`
 
 Retrieves a set of the user's current policy chains.
