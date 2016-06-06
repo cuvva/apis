@@ -173,13 +173,14 @@ will be thrown.
 	"vehicle_id": "56150f6fd0acdc14008e9551",
 	"estimated_value": 5555,
 	"photo_id": "5730a3ac1bb9810100904d6d",
-	"available": true,
+	"visible": true,
 	"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
-	"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉"
+	"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+	"location_text": "Haddington, EH41",
 }
 ```
 
-The `contribution_text` is optional.
+The `description`, `contribution_text`, and `location_text` fields are optional.
 
 #### Response
 
@@ -189,9 +190,10 @@ The `contribution_text` is optional.
 	"estimated_value": 5555,
 	"photo_id": "5730a3ac1bb9810100904d6d",
 	"photo_url": "https://i.imgur.com/ve2hJmZ.png",
-	"available": true,
+	"visible": true,
 	"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
 	"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+	"location_text": "Haddington, EH41",
 	"vrm": "LB07SEO",
 	"pretty_vrm": "LB07 SEO",
 	"manufacture_year": 2007,
@@ -243,9 +245,10 @@ will track the current location of vehicles in the future.
 		"estimated_value": 5555,
 		"photo_id": "5730a3ac1bb9810100904d6d",
 		"photo_url": "https://i.imgur.com/ve2hJmZ.png",
-		"available": true,
+		"visible": true,
 		"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
 		"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+		"location_text": "Haddington, EH41",
 		"vrm": "LB07SEO",
 		"pretty_vrm": "LB07 SEO",
 		"manufacture_year": 2007,
@@ -288,15 +291,17 @@ will track the current location of vehicles in the future.
 			"id": "13feab59-f669-4b6c-888a-077aaab235b4",
 			"display_name": "Freddy Macnamara",
 			"short_name": "Freddy",
-			"image_url": "https://i.imgur.com/MhTIiHP.png"
+			"image_url": "https://i.imgur.com/MhTIiHP.png",
+			"email": "freddy@cuvva.co",
+			"phone": "+447700900123"
 		},
 		"vehicle": {
 			"id": "56150f6fd0acdc14008e9551",
 			"estimated_value": 5555,
 			"photo_url": "https://i.imgur.com/ve2hJmZ.png",
-			"available": true,
 			"description": "My car is stuck up in Edinburgh not being used at the moment. Happy for anyone to borrow it for a few hours - just let me know. Gets a little wobbly over 85mph!",
 			"contribution_text": "Top up the petrol once you're done please. Always appreciate a bit of tidying up too... 😉",
+			"location_text": "Haddington, EH41",
 			"vrm": "LB07SEO",
 			"pretty_vrm": "LB07 SEO",
 			"manufacture_year": 2007,
@@ -310,15 +315,17 @@ will track the current location of vehicles in the future.
 			"id": "240e2a3e-638d-471b-9510-203e15b743b7",
 			"display_name": "George Miller",
 			"short_name": null,
-			"image_url": null
+			"image_url": null,
+			"email": null,
+			"phone": null
 		},
 		"vehicle": {
 			"id": "56151ccad0acdc14008e95c3",
 			"estimated_value": 10000,
 			"photo_url": "http://i.imgur.com/Qp11zsr.jpg",
-			"available": false,
-			"description": "Best car you'll ever drive, but be nice with her. She is nippy and can surprise you ;)",
+			"description": null,
 			"contribution_text": null,
+			"location_text": null,
 			"vrm": "GF09ERJ",
 			"pretty_vrm": "GF09 ERJ",
 			"manufacture_year": 2009,
