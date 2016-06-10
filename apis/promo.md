@@ -17,6 +17,9 @@ and the referral instructions which explain how the code can be used (can be
 
 For non-internal requests, `user_id` must match the access token JWT subject.
 
+The code stored internally will be prefixed with `U` to differentiate referral
+codes from potential future promo codes.
+
 The existence of the user referred to by `user_id` will not be checked. Referral
 codes will be generated for all `user_id`s provided regardless of existence.
 
@@ -25,7 +28,8 @@ Example response body:
 ```json
 {
 	"code": "UWKJ4P4VUC",
-	"instructions": "We'll give you a pat on the back when someone you refer buys their first policy."
+	"instructions": "We'll give you a pat on the back when someone you refer buys their first policy.",
+	"shareText": "If you sign up for Cuvva with my code, we both get a pat on the back. \uD83D\uDE42"
 }
 ```
 
