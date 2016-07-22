@@ -126,17 +126,23 @@ Create a payment authorization for a payable.
 
 Handler is idempotent - if a payment already exists for the payable, the
 parameters will be checked to ensure they match, then the original response will
-be returned. The `sourceId` and `stripeToken` are not checked, as this is not
-currently possible.
+be returned. The source information is not checked, as this is not currently
+possible.
 
 `payableId`, `userId` and `amount` must be provided. Otherwise, an error will be
 returned. `amount` and `userId` must also match their corresponding properties
 in the payable.
 
-One of `sourceId`, or `stripeToken` must be provided (not both):
+The source must be specified one of the following three ways:
 
-- `sourceId` - for choosing which source should be charged (checked against the `userId`)
+- `sourceId` - for choosing which source should be charged
+- `sourceId` and `threeDSecureToken` - after completing a 3DS challenge
 - `stripeToken` - for one-time-use payment methods, such as Apple Pay
+
+If the server determines that 3D Secure is required, it will throw
+`threedsecure_verification` with the `threeDSecureToken` and `verificationUrl`
+fields in the meta object. The URL should be presented to the user, who can
+verify the transaction.
 
 For non-internal requests, `userId` must match the access token JWT subject.
 
@@ -147,6 +153,16 @@ Example request bodies:
 	"payableId": "8e4b172064ac94c27814fb15",
 	"userId": "4b0f9115-f736-4ac8-a8e3-127991dea6cf",
 	"sourceId": "card_18WOu8FHyMT1SCUFZThyPQrJ",
+	"amount": 500
+}
+```
+
+```json
+{
+	"payableId": "8e4b172064ac94c27814fb15",
+	"userId": "4b0f9115-f736-4ac8-a8e3-127991dea6cf",
+	"sourceId": "card_18WOu8FHyMT1SCUFZThyPQrJ",
+	"threeDSecureToken": "tdsrc_8ouyAU4BztyC3b",
 	"amount": 500
 }
 ```
