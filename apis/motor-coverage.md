@@ -148,7 +148,18 @@ Example response body:
 	"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 	"underwriterLegalName": "Foobar Insurance Company Limited",
 	"underwriterShortName": "Foobar",
-	"referenceCode": "PQ37E6HEDC"
+	"referenceCode": "PQ37E6HEDC",
+	"pricing": {
+		"totalPremium": 459,
+		"ipt": 44,
+		"extraFees": 100,
+		"vat": 20,
+		"totalPayable": 623
+	},
+	"location": {
+		"latitude": 55.9462597,
+		"longitude": -3.2015704
+	}
 }
 ```
 
@@ -182,7 +193,18 @@ Example response body:
 			"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 			"underwriterLegalName": "Foobar Insurance Company Limited",
 			"underwriterShortName": "Foobar",
-			"referenceCode": "PQ37E6HEDC"
+			"referenceCode": "PQ37E6HEDC",
+			"pricing": {
+				"totalPremium": 459,
+				"ipt": 44,
+				"extraFees": 100,
+				"vat": 20,
+				"totalPayable": 623
+			},
+			"location": {
+				"latitude": 55.9462597,
+				"longitude": -3.2015704
+			}
 		}
 	]
 }
@@ -215,7 +237,18 @@ Example response body:
 				"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 				"underwriterLegalName": "Foobar Insurance Company Limited",
 				"underwriterShortName": "Foobar",
-				"referenceCode": "PQ37E6HEDC"
+				"referenceCode": "PQ37E6HEDC",
+				"pricing": {
+					"totalPremium": 459,
+					"ipt": 44,
+					"extraFees": 100,
+					"vat": 20,
+					"totalPayable": 623
+				},
+				"location": {
+					"latitude": 55.9462597,
+					"longitude": -3.2015704
+				}
 			}
 		]
 	}
@@ -252,7 +285,18 @@ Example response body:
 				"underwriterId": "815facf0-cebb-4b63-98cd-7b63de91d465",
 				"underwriterLegalName": "Foobar Insurance Company Limited",
 				"underwriterShortName": "Foobar",
-				"referenceCode": "PQ37E6HEDC"
+				"referenceCode": "PQ37E6HEDC",
+				"pricing": {
+					"totalPremium": 459,
+					"ipt": 44,
+					"extraFees": 100,
+					"vat": 20,
+					"totalPayable": 623
+				},
+				"location": {
+					"latitude": 55.9462597,
+					"longitude": -3.2015704
+				}
 			}
 		]
 	}
