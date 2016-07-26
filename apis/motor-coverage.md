@@ -158,7 +158,9 @@ Example response body:
 	},
 	"location": {
 		"latitude": 55.9462597,
-		"longitude": -3.2015704
+		"longitude": -3.2015704,
+		"postalCodeFull": "EH3 9DR",
+		"postalCodeShort": "EH3"
 	}
 }
 ```
@@ -203,7 +205,9 @@ Example response body:
 			},
 			"location": {
 				"latitude": 55.9462597,
-				"longitude": -3.2015704
+				"longitude": -3.2015704,
+				"postalCodeFull": "EH3 9DR",
+				"postalCodeShort": "EH3"
 			}
 		}
 	]
@@ -247,7 +251,9 @@ Example response body:
 				},
 				"location": {
 					"latitude": 55.9462597,
-					"longitude": -3.2015704
+					"longitude": -3.2015704,
+					"postalCodeFull": "EH3 9DR",
+					"postalCodeShort": "EH3"
 				}
 			}
 		]
@@ -295,7 +301,9 @@ Example response body:
 				},
 				"location": {
 					"latitude": 55.9462597,
-					"longitude": -3.2015704
+					"longitude": -3.2015704,
+					"postalCodeFull": "EH3 9DR",
+					"postalCodeShort": "EH3"
 				}
 			}
 		]
