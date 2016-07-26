@@ -51,6 +51,7 @@ Example response body:
 			"ipt": 44,
 			"extraFees": 100,
 			"vat": 20,
+			"deductions": 0,
 			"totalPayable": 623,
 			"mandatoryExcess": 500,
 			"payableId": "56d49c598211890100b12b4d",
@@ -154,6 +155,7 @@ Example response body:
 		"ipt": 44,
 		"extraFees": 100,
 		"vat": 20,
+		"deductions": 0,
 		"totalPayable": 623
 	},
 	"location": {
@@ -201,6 +203,7 @@ Example response body:
 				"ipt": 44,
 				"extraFees": 100,
 				"vat": 20,
+				"deductions": 0,
 				"totalPayable": 623
 			},
 			"location": {
@@ -247,6 +250,7 @@ Example response body:
 					"ipt": 44,
 					"extraFees": 100,
 					"vat": 20,
+					"deductions": 0,
 					"totalPayable": 623
 				},
 				"location": {
@@ -297,6 +301,7 @@ Example response body:
 					"ipt": 44,
 					"extraFees": 100,
 					"vat": 20,
+					"deductions": 0,
 					"totalPayable": 623
 				},
 				"location": {
