@@ -104,6 +104,7 @@ Example response body:
 			"ipt": 44,
 			"extraFees": 100,
 			"vat": 20,
+			"deductions": 0,
 			"totalPayable": 623
 		}
 	]
