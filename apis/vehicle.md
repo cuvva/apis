@@ -2,7 +2,7 @@
 
 Base URL:
 
-- https://vehicle-prod.env.cuvva.co
+- https://service-vehicle.prod.ext.cuvva.co
 
 ## API
 

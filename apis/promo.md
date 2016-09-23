@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- dev: https://promo-dev.env.cuvva.co
-- prod: https://promo-prod.env.cuvva.co
+- dev: https://service-promo.dev.ext.cuvva.co
+- prod: https://service-promo.prod.ext.cuvva.co
 
 ## API
 

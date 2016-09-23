@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- dev: https://profile-dev.env.cuvva.co
-- prod: https://profile-prod.env.cuvva.co
+- dev: https://service-profile.dev.ext.cuvva.co
+- prod: https://service-profile.prod.ext.cuvva.co
 
 ## API
 

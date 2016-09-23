@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- dev: https://billing-dev.env.cuvva.co
-- prod: https://billing-prod.env.cuvva.co
+- dev: https://service-billing.dev.ext.cuvva.co
+- prod: https://service-billing.prod.ext.cuvva.co
 
 Stripe keys:
 

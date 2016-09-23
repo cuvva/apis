@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- dev: https://garage-dev.env.cuvva.co
-- prod: https://garage-prod.env.cuvva.co
+- dev: https://service-garage.dev.ext.cuvva.co
+- prod: https://service-garage.prod.ext.cuvva.co
 
 ## API
 
@@ -100,7 +100,7 @@ Records potential vehicle ownership against a name and a set of identifiers.
 		},
 		{
 			"type": "email",
-			"value": "freddy@cuvva.co"
+			"value": "freddy@cuvva.com"
 		}
 	]
 }
@@ -292,7 +292,7 @@ will track the current location of vehicles in the future.
 			"display_name": "Freddy Macnamara",
 			"short_name": "Freddy",
 			"image_url": "https://i.imgur.com/MhTIiHP.png",
-			"email": "freddy@cuvva.co",
+			"email": "freddy@cuvva.com",
 			"phone": "+447700900123"
 		},
 		"vehicle": {

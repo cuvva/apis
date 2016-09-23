@@ -28,4 +28,4 @@ systems.
 
 By default, accounts only work on the production systems. If you'd like access
 to the development servers, drop me an email at
-[james.billingham@cuvva.co](mailto:james.billingham@cuvva.co).
+[james.billingham@cuvva.com](mailto:james.billingham@cuvva.com).

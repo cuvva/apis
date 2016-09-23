@@ -2,7 +2,7 @@
 
 Base URL:
 
-- https://notification-prod.env.cuvva.co
+- https://service-notification.prod.ext.cuvva.co
 
 ## API
 

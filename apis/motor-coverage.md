@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- dev: https://motor-coverage-dev.env.cuvva.co
-- prod: https://motor-coverage-prod.env.cuvva.co
+- dev: https://service-motor-coverage.dev.ext.cuvva.co
+- prod: https://service-motor-coverage.prod.ext.cuvva.co
 
 ## API
 

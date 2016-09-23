@@ -2,7 +2,7 @@
 
 Base URL:
 
-- https://upload-prod.env.cuvva.co
+- https://service-upload.prod.ext.cuvva.co
 
 ## API
 

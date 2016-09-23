@@ -5,7 +5,7 @@ version, look in the file history.
 
 Base URL:
 
-- https://auth-prod.env.cuvva.co
+- https://service-auth.prod.ext.cuvva.co
 
 ## API
 
@@ -45,7 +45,7 @@ depending on the exact reason.
 ```json
 {
 	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
-	"email": "james@cuvva.co",
+	"email": "james@cuvva.com",
 	"mobile_phone": "+447700900123",
 	"facebook_token": "EAAWgC7Fr0sABABA3gzOviDuZDZD"
 }
@@ -146,7 +146,7 @@ Retrieves data for the user and returns it. Authorization is required.
 ```json
 {
   "id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
-  "email": "james@cuvva.co",
+  "email": "james@cuvva.com",
   "email_verified": true,
   "mobile_phone": "+447700900123",
   "mobile_phone_verified": false,
