@@ -4,10 +4,11 @@ Base URLs:
 
 - dev: https://service-billing.dev.ext.cuvva.co
 - prod: https://service-billing.prod.ext.cuvva.co
+- sandbox: https://service-billing.sandbox.ext.cuvva.co
 
 Stripe keys:
 
-- test: `pk_test_aECH9zVgwnkPbAmBjWyLdkrr`
+- dev/sandbox: `pk_test_aECH9zVgwnkPbAmBjWyLdkrr`
 - live: `pk_live_eHTSOIlGyXzbHFWtO4fEi9sr`
 
 ## API

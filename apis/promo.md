@@ -4,6 +4,7 @@ Base URLs:
 
 - dev: https://service-promo.dev.ext.cuvva.co
 - prod: https://service-promo.prod.ext.cuvva.co
+- sandbox: https://service-promo.sandbox.ext.cuvva.co
 
 ## API
 

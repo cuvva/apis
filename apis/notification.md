@@ -1,8 +1,9 @@
 # notification service
 
-Base URL:
+Base URLs:
 
-- https://service-notification.prod.ext.cuvva.co
+- prod: https://service-notification.prod.ext.cuvva.co
+- sandbox: https://service-notification.sandbox.ext.cuvva.co
 
 ## API
 

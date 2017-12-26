@@ -1,17 +1,14 @@
 # auth service
 
-This file documents the second version of the auth service. To see the original
-version, look in the file history.
+Base URLs:
 
-Base URL:
-
-- https://service-auth.prod.ext.cuvva.co
+- prod: https://service-auth.prod.ext.cuvva.co
+- sandbox: https://service-auth.sandbox.ext.cuvva.co
 
 ## API
 
-Conforms to the [Cuvva services standard][1]. However, unlike most Cuvva
-services, this service is *not* RESTful. This is by design - a small experiment
-to see whether a simplified RPC-style interface could serve us better.
+Conforms to the [Cuvva services standard][1]. However, this service is *not*
+RESTful. Instead, it follows more of a simplified RPC approach.
 
 All methods are specified below. Methods are called as
 `POST /2/:version/:method`.
@@ -51,7 +48,7 @@ depending on the exact reason.
 }
 ```
 
-The `facebook_token` is optional.
+The `facebook_token` and `mobile_phone` fields are optional.
 
 #### Response
 
@@ -71,6 +68,9 @@ The `facebook_token` is optional.
 
 Creates and returns authentication data - access token, refresh token, etc.
 
+This conforms to the "Token Endpoint" defined in the
+[OAuth 2.0](https://tools.ietf.org/html/rfc6749#section-3.2) spec.
+
 The `access_token` returned is short lived. The `refresh_token` allows you to
 get a new access token once the original one has expired. Refresh tokens last a
 long time, but can only be used once - they are replaced when used.
@@ -82,18 +82,20 @@ Multiple methods of authenticating are available. Which one is determined by the
 
 ##### `identifier_token`
 
-Authenticates based on a verified external identifier - email, mobile phone or
-Facebook login.
+Authenticates based on a verified external identifier - email or Facebook login.
 
 If the token is invalid, `invalid_token` will be thrown. If the token is valid
 but no user exists for the identifier, `identifier_not_found` will be thrown.
+
+**Note:** although mobile phone identifiers are currently supported for
+authentication, this is now deprecated and will stop working in the near future.
 
 ```json
 {
 	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
 	"grant_type": "identifier_token",
-	"identifier_type": "mobile_phone",
-	"identifier_value": "+447700900123",
+	"identifier_type": "email",
+	"identifier_value": "james@cuvva.com",
 	"identifier_token": "123456"
 }
 ```
@@ -190,6 +192,7 @@ the exact reason. If the identifier is already used by another user, an
 ```json
 {
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"client_id": "285b13ee-e5a5-4391-990e-4b9c8da590f6",
 	"type": "facebook",
 	"value": "1122521981125307",
 	"token": "EAAWgC7Fr0sABABA3gzOviDuZDZD"

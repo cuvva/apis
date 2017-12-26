@@ -1,8 +1,9 @@
 # upload service
 
-Base URL:
+Base URLs:
 
-- https://service-upload.prod.ext.cuvva.co
+- prod: https://service-upload.prod.ext.cuvva.co
+- sandbox: https://service-upload.sandbox.ext.cuvva.co
 
 ## API
 
@@ -28,7 +29,7 @@ Example raw request:
 ```http
 POST /1/files HTTP/1.1
 Authorization: Bearer 01.eyJhbGciOiJub25lIn0.eyJzdWIiOiI4YmZjYmZmOC00YTFlLTQ4OWEtODFkMS0yZmIxNDFlMTkxNTkifQ.
-Host: upload-prod.env.cuvva.co
+Host: service-upload.prod.ext.cuvva.co
 Content-Type: multipart/form-data; boundary=RandomString123
 Content-Length: 437
 

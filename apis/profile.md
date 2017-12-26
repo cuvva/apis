@@ -4,6 +4,7 @@ Base URLs:
 
 - dev: https://service-profile.dev.ext.cuvva.co
 - prod: https://service-profile.prod.ext.cuvva.co
+- sandbox: https://service-profile.sandbox.ext.cuvva.co
 
 ## API
 
@@ -22,25 +23,9 @@ Example response body:
 	"id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"createdAt": "2015-01-01T00:00:00Z",
 	"updatedAt": "2015-01-01T00:00:00Z",
-	"title": "Mr",
-	"familyName": "Billingham",
-	"personalName": "James",
-	"preferredName": "Bob",
-	"sex": "M",
-	"birthDate": "1990-01-01",
-	"licenseNumber": "BILLI901010J99AA",
-	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
-	"licensePhotoId": "56d4b4d241a58b01003e3419",
-	"address": {
-		"lines": [
-			"Cuvva c/o Codebase",
-			"3 Lady Lawson Street"
-		],
-		"locality": "Edinburgh",
-		"postalCode": "EH3 9DR",
-		"countryCode": "GB"
-	},
-	"claims": []
+	"firstName": "James",
+	"lastName": "Billingham",
+	[...]
 }
 ```
 
@@ -55,24 +40,8 @@ Example request body:
 
 ```json
 {
-	"address": {
-		"lines": [
-			"Cuvva c/o Barclays Accelerator",
-			"69-89 Mile End Road"
-		],
-		"locality": "London",
-		"postalCode": "E1 4TT",
-		"countryCode": "GB"
-	},
-	"claims": [
-		{
-			"incidentDate": "2014-01-01",
-			"category": "Accident",
-			"bodilyInjury": false,
-			"atFault": false,
-			"value": 500
-		}
-	]
+	"email": "james@cuvva.com",
+	[...]
 }
 ```
 
@@ -82,34 +51,11 @@ Example response body:
 {
 	"id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"createdAt": "2015-01-01T00:00:00Z",
-	"updatedAt": "2015-01-01T00:00:00Z",
-	"title": "Mr",
-	"familyName": "Billingham",
-	"personalName": "James",
-	"preferredName": "Bob",
-	"sex": "M",
-	"birthDate": "1990-01-01",
-	"licenseNumber": "BILLI901010J99AA",
-	"profilePhotoId": "56d4b4cdf96cf40100b6b6d0",
-	"licensePhotoId": "56d4b4d241a58b01003e3419",
-	"address": {
-		"lines": [
-			"Cuvva c/o Barclays Accelerator",
-			"69-89 Mile End Road"
-		],
-		"locality": "London",
-		"postalCode": "E1 4TT",
-		"countryCode": "GB"
-	},
-	"claims": [
-		{
-			"incidentDate": "2014-01-01",
-			"category": "Accident",
-			"bodilyInjury": false,
-			"atFault": false,
-			"value": 500
-		}
-	]
+	"updatedAt": "2015-01-01T12:00:00Z",
+	"firstName": "James",
+	"lastName": "Billingham",
+	"email": "james@cuvva.com",
+	[...]
 }
 ```
 
