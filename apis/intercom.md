@@ -1,55 +1,36 @@
-# intercom service
+# service-intercom
 
 Base URLs:
 
-- dev: https://service-intercom.dev.ext.cuvva.co
-- prod: https://service-intercom.prod.ext.cuvva.co
-- sandbox: https://service-intercom.sandbox.ext.cuvva.co
+- dev: https://service-intercom.dev.ext.cuvva.co/1
+- prod: https://service-intercom.prod.ext.cuvva.co/1
+- sandbox: https://service-intercom.sandbox.ext.cuvva.co/1
 
-## API
+## Versions
 
-Conforms to the [Cuvva services standard][1]. However, this service is *not*
-RESTful. Instead, it follows more of a simplified RPC approach.
+- 2017-05-09: first documented version - service already existed at this point
+- 2017-07-24: no change - just needed for app compatibility
+- 2017-11-23: no change - just needed for app compatibility
 
-All methods are specified below. Methods are called as
-`POST /1/:version/:method`.
-
-The `:version` is replaced with the date you implemented the code using the API.
-Versions must not be mixed and matched - all calls to this service must use the
-same version string.
-
-Neither the query string, nor any URL parameters are used. Input is only
-supported via the body. JSON and urlencoded forms are supported for input.
-Output is always JSON. Unless otherwise noted, methods do not require
-authorization.
-
-Where no response is specified for a method, no response will be provided. The
-status code will be 204. The response may be changed to return data - with a
-different 2xx status code - at any time. This would not be considered a breaking
-change.
+## Methods
 
 ### `get_hash`
 
-Generates the SHA256-HMAC digest required for Intercom's "secure mode":
-https://developers.intercom.com/v2.0/docs/ios-identity-verification
+Returns the relevant HMAC digest for use with Intercom's "secure mode".
 
 #### Request
 
 ```json
 {
-	"client": "ios",
-	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159"
+	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
+	"client": "ios"
 }
 ```
-
-`client` can be `web`, `ios`, or `android`.
 
 #### Response
 
 ```json
 {
-	"hash": "3aed6baac145ab7858417b1780a959e5f276165b1a3f6ce2e31122d667ca766a"
+	"hash": "c5f797ad49aed2d46c3c6a3f4e3a29e9ab17bdf28db944eee499861aeb22e09e"
 }
 ```
-
-[1]: https://github.com/cuvva/standards/blob/master/services.md

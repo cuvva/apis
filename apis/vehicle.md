@@ -1,9 +1,10 @@
-# vehicle service
+# service-vehicle
 
 Base URLs:
 
 - prod: https://service-vehicle.prod.ext.cuvva.co
 - sandbox: https://service-vehicle.sandbox.ext.cuvva.co
+
 
 ## API
 
@@ -23,7 +24,6 @@ Returns information about the vehicle referenced (including DVLA data) as refere
 	"example": false,
 	"vrm": "LB07SEO",
 	"prettyVrm": "LB07 SEO",
-	"manufactureYear": 2007,
 	"make": "Volkswagen",
 	"model": "Polo",
 	"variant": "SE 80",
@@ -68,6 +68,7 @@ All example vehicles purposefully have some fields left blank and an invalid ID,
 	...more_vehicles
 ]
 ```
+
 
 ### Error Codes
 
