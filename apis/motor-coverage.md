@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-motor-coverage.dev.ext.cuvva.co
-- prod: https://service-motor-coverage.prod.ext.cuvva.co
-- sandbox: https://service-motor-coverage.sandbox.ext.cuvva.co
+- dev: https://service-proxy.dev.ext.cuvva.co/1/service-motor-coverage
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-motor-coverage
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-motor-coverage
 
 ## Old REST API (`/1`)
 

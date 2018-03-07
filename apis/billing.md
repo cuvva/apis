@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-billing.dev.ext.cuvva.co
-- prod: https://service-billing.prod.ext.cuvva.co
-- sandbox: https://service-billing.sandbox.ext.cuvva.co
+- dev: https://service-proxy.dev.ext.cuvva.co/1/service-billing
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-billing
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-billing
 
 Stripe keys:
 

@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-profile.dev.ext.cuvva.co
-- prod: https://service-profile.prod.ext.cuvva.co
-- sandbox: https://service-profile.sandbox.ext.cuvva.co
+- dev: https://service-proxy.dev.ext.cuvva.co/1/service-profile
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-profile
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-profile
 
 ## API
 

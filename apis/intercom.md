@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-intercom.dev.ext.cuvva.co/1
-- prod: https://service-intercom.prod.ext.cuvva.co/1
-- sandbox: https://service-intercom.sandbox.ext.cuvva.co/1
+- dev: https://service-proxy.dev.ext.cuvva.co/1/service-intercom/1
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-intercom/1
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-intercom/1
 
 ## Versions
 

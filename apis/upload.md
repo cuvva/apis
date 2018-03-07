@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- prod: https://service-upload.prod.ext.cuvva.co
-- sandbox: https://service-upload.sandbox.ext.cuvva.co
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-upload
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-upload
 
 ## API
 

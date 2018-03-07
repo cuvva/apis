@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- prod: https://service-auth.prod.ext.cuvva.co/2
-- sandbox: https://service-auth.sandbox.ext.cuvva.co/2
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-auth/2
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-auth/2
 
 ## Versions
 

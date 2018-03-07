@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-news.dev.ext.cuvva.co/1
-- prod: https://service-news.prod.ext.cuvva.co/1
-- sandbox: https://service-news.sandbox.ext.cuvva.co/1
+- dev: https://service-proxy.dev.ext.cuvva.co/1/service-news/1
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-news/1
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-news/1
 
 ## Versions
 

@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- prod: https://service-notification.prod.ext.cuvva.co
-- sandbox: https://service-notification.sandbox.ext.cuvva.co
+- prod: https://service-proxy.prod.ext.cuvva.co/1/service-notification
+- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-notification
 
 ## API
 
