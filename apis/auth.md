@@ -7,31 +7,60 @@ Base URLs:
 
 ## Versions
 
-- 2017-05-09: first documented version - service already existed at this point
-- 2017-07-24: no change - just needed for app compatibility
-- 2017-11-23: no change - just needed for app compatibility
+### 2017-05-09
+
+This is the first documented version - service already existed at this point.
+
+### 2017-07-24
+
+No change - just needed for app compatibility.
+
+### 2017-11-23
+
+No change - just needed for app compatibility.
+
+### 2018-03-06
+
+- `register_user` has been replaced completely - it now accepts a set of grants which represent identifiers
+- `authenticate` no longer accepts email/mobile phone identifier tokens, but social login identifier tokens are still fine
+- `send_identifier_token` requires authentication (as it is only usable with `replace_identifier` now)
+- `replace_identifier` requires the `client_id` field
+- sent identifier tokens are now user-specific, so ones sent by older versions cannot be used with this version, and vice-versa
+
+Non-breaking but significant:
+
+- `send_authorization_code` added
+- `authenticate` now accepts authorization codes
 
 ## Methods
 
 ### `register_user`
 
-Creates the user with unverified identifiers (other than with social login tokens) and returns authentication data - including an access token, refresh token, etc.
-
-If a user already exists for any of the identifiers, an `already_exists` error will be thrown. If the format or contents of any identifier value is invalid, `invalid_identifiers` will be thrown with various different inner errors depending on the exact reason.
+Creates the user with a set of identifiers (verified via OAuth grants) and returns authentication data - including an access token, refresh token, etc.
 
 #### Request
 
-```json
+```js
 {
 	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
-	"email": "james@cuvva.com",
-	"mobile_phone": "+447700900123",
-	"facebook_token": "EAAWgC7Fr0sABABA3gzOviDuZDZD",
-	"google_token": "EAAWgC7Fr0sABABA3gzOviDuZDZD",
+	"grants": [
+		{
+			"grant_type": "authorization_code",
+			"code": "blah",
+			"code_verifier": "blah"
+		},
+		{
+			"grant_type": "identifier_token",
+			"identifier_type": "facebook",
+			"identifier_value": "1234",
+			"identifier_token": "1234"
+		},
+		...more
+	]
 }
 ```
 
-The `facebook_token`, `google_token` and `mobile_phone` fields are optional.
+At the very least, an `authorization_code` grant (representing the email address) must be provided. Social login identifier tokens may be provided if desired.
 
 #### Response
 
@@ -44,6 +73,32 @@ The `facebook_token`, `google_token` and `mobile_phone` fields are optional.
 	"refresh_token": "02.571cbf2a5e72750100a41a5b.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
 	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM"
+}
+```
+
+#### `already_exists` error
+
+If a user already exists for any of the identifiers, an `already_exists` error will be thrown, but the grants will not be consumed.
+
+This means it is possible to then immediately login with the existing grant parameters. However, it's important to understand the context and offer appropriate context and a logical option to help the user continue.
+
+The `index` refers to the index of the input array of `grants`. The `user_key` helps to identify whether the grants are attached to the same user account or not. Although they do currently include the user ID, this may change and they should be treated as opaque strings.
+
+```json
+{
+	"code": "already_exists",
+	"meta": {
+		"grants": [
+			{
+				"index": 0,
+				"user_key": "user/8bfcbff8-4a1e-489a-81d1-2fb141e19159"
+			},
+			{
+				"index": 1,
+				"user_key": "user/8bfcbff8-4a1e-489a-81d1-2fb141e19159"
+			}
+		]
+	}
 }
 ```
 
