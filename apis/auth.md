@@ -23,7 +23,7 @@ If a user already exists for any of the identifiers, an `already_exists` error w
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"email": "james@cuvva.com",
 	"mobile_phone": "+447700900123",
 	"facebook_token": "EAAWgC7Fr0sABABA3gzOviDuZDZD",
@@ -43,7 +43,7 @@ The `facebook_token`, `google_token` and `mobile_phone` fields are optional.
 	"expires_at": "2016-06-01T00:00:00Z",
 	"refresh_token": "02.571cbf2a5e72750100a41a5b.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f"
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM"
 }
 ```
 
@@ -61,7 +61,7 @@ Authorization codes are valid for a short period of time. When another is reques
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"response_type": "code",
 	"redirect_uri": "https://magic.cuvva.com/auth-callback",
 	"state": "zCKoiZpLa8PcDZLJthr_Y_96pCrGtELDD-cY3XDPMxo",
@@ -136,7 +136,7 @@ Once an authorization code has been successfully used, it cannot be reused, and 
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"grant_type": "authorization_code",
 	"redirect_uri": "https://magic.cuvva.com/auth-callback",
 	"code": "c5c5f381833193cc71de42de.e2d09621646f6c104d7d6def9d1243e5fc22b0df765f8351495906c0ff2d0677",
@@ -153,7 +153,7 @@ but no user exists for the identifier, `identifier_not_found` will be thrown.
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"grant_type": "identifier_token",
 	"identifier_type": "facebook",
 	"identifier_value": "1122521981125307",
@@ -172,7 +172,7 @@ If this happens, the user will typically need to log in again from scratch.
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"grant_type": "refresh_token",
 	"refresh_token": "02.571cbf2a5e72750100a41a5b.960b19318364fb3838b97695b27c36287fbd02d677131dfd41261f7d1bd3a62c"
 }
@@ -188,7 +188,7 @@ If this happens, the user will typically need to log in again from scratch.
 	"expires_at": "2016-06-01T00:00:00Z",
 	"refresh_token": "02.571cbbadf999da0100de3a70.0335fc54f030a9a476d210854f4cb1f5def99f64ea063b806fde65563feb0c86",
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159",
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f"
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM"
 }
 ```
 
@@ -200,7 +200,7 @@ Revokes all authorization codes, refresh tokens and access tokens associated wit
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"user_id": "8bfcbff8-4a1e-489a-81d1-2fb141e19159"
 }
 ```
@@ -241,7 +241,7 @@ All requests must now be authorized - previously this could be used prior to log
 
 ```json
 {
-	"client_id": "06c92f2c-8bbb-403c-9ee7-3b3b8eb0b30f",
+	"client_id": "client_000000BPG6PISgRjLvxD5rf7Bf0FM",
 	"type": "mobile_phone",
 	"value": "+447700900123"
 }
