@@ -11,6 +11,21 @@ Base URLs:
 
 ## Methods
 
+### `get_document_base`
+
+Provides URLs to the base resources needed to render all documents.
+
+When fetching content from the URLs, provide the `ETag` from any existing cached content via the `If-None-Match` header and check for a 304 response.
+
+#### Response
+
+```json
+{
+	"css_url": "https://example.com",
+	"logo_url": "https://example.com"
+}
+```
+
 ### `get_strings`
 
 Returns string mappings for display to customers - e.g. label copy etc.
