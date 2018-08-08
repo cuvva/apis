@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-proxy.dev.ext.cuvva.co/1/service-incident
-- prod: https://service-proxy.prod.ext.cuvva.co/1/service-incident
-- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-incident
+- dev: https://api.dev.cuv-nonprod.app/1/service-incident
+- prod: https://api.prod.cuv-prod.app/1/service-incident
+- sandbox: https://api.sandbox.cuv-nonprod.app/1/service-incident
 
 ## Incident Categories
 

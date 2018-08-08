@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- dev: https://service-proxy.dev.ext.cuvva.co/1/service-flexi
-- prod: https://service-proxy.prod.ext.cuvva.co/1/service-flexi
-- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-flexi
+- dev: https://api.dev.cuv-nonprod.app/1/service-flexi
+- prod: https://api.prod.cuv-prod.app/1/service-flexi
+- sandbox: https://api.sandbox.cuv-nonprod.app/1/service-flexi
 
 ## API
 

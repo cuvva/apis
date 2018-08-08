@@ -2,8 +2,8 @@
 
 Base URLs:
 
-- prod: https://service-proxy.prod.ext.cuvva.co/1/service-content/1
-- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-content/1
+- prod: https://api.prod.cuv-prod.app/1/service-content/1
+- sandbox: https://api.sandbox.cuv-nonprod.app/1/service-content/1
 
 ## Versions
 

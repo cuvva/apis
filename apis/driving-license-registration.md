@@ -2,9 +2,9 @@
 
 Base URLs:
 
-- prod: https://service-proxy.prod.ext.cuvva.co/1/service-driving-license-registration/1
-- dev: https://service-proxy.dev.ext.cuvva.co/1/service-driving-license-registration/1
-- sandbox: https://service-proxy.sandbox.ext.cuvva.co/1/service-driving-license-registration/1
+- prod: https://api.prod.cuv-prod.app/1/service-driving-license-registration/1
+- dev: https://api.dev.cuv-nonprod.app/1/service-driving-license-registration/1
+- sandbox: https://api.sandbox.cuv-nonprod.app/1/service-driving-license-registration/1
 
 ## Versions
 
