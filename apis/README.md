@@ -7,6 +7,7 @@ These services work with the same data in testing and real-life usage. As such, 
 - [auth](auth.md) - provides a simple OAuth implementation, authorizing access to all other services
 - [code-mapping](code-mapping.md) - provides human-readable mappings for codelists
 - [content](content.md) - provides strings and pages for display to users
+- [dvla-ves](dvla-ves.md) - provides vehicle data from the DVLA
 - [marketing-consent](marketing-consent.md) - keeps track of users' consent for marketing communications
 - [mot](mot.md) - provides MOT testing data from the DVSA
 - [notification](notification.md) - registration of push notification tokens
